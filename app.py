@@ -1,5 +1,6 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, render_template, g
 import webbrowser, markdown.extensions.fenced_code
+from werkzeug.urls import url_parse
 
 app = Flask(__name__)
 
@@ -18,11 +19,15 @@ def main():
 # MAIN Redirect Process
 @app.route("/linkify")
 def linkify():
-    github_link = request.args.get('myLink')
-    direct_link = request.args.get('gotoLink')
-    webbrowser.open_new_tab('{}'.format(direct_link))
-    return redirect(github_link)
+    direct_link = request.args.get('link')
+    if len(str(direct_link)) > 0:
+        return render_template('redirect.html', direct_link = direct_link)
+        
+    else:
+        return redirect('https://github.com/dev-nolant')
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# http://127.0.0.1:5000/linkify?myLink=https://github.com/dev-nolant/UCCS-Mimir-Help&gotoLink=https://choosealicense.com/licenses/mit/
