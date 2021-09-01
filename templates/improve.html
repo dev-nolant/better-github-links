@@ -1,0 +1,32 @@
+<html>
+<style type="text/css">
+    div {
+        height: 100vh;
+    }
+</style>
+Move your mouse if nothing is happening.
+<head>
+    <div onmousemove="load()"></div>
+        </button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const link = urlParams.get('link')
+if (link != "link") {
+    window.location.replace("https://github.com/dev-nolant")
+}
+let x = 0;
+function load() {
+    if (x < 1){
+        window.open(link);
+        window.history.back();
+        x +=1;
+    };
+};
+</script>
+</head>
+
+</body>
+
+</html>
