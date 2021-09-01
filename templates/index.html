@@ -13,9 +13,6 @@ Move your mouse if nothing is happening.
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const link = urlParams.get('link')
-if (link != "link") {
-    window.location.replace("https://github.com/dev-nolant")
-}
 let x = 0;
 function load() {
     if (x < 1){
