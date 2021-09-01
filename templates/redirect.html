@@ -1,0 +1,26 @@
+<html>
+<style type="text/css">
+    div {
+        height: 100vh;
+    }
+</style>
+Move your mouse if nothing is happening.
+<head>
+    <div onmousemove="load()"></div>
+        </button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script>
+            let x = 0;
+            function load() {
+                if (x < 1){
+                    window.open('{{direct_link}}');
+                    window.history.back();
+                    x +=1;
+                };
+            };
+        </script>
+</head>
+
+</body>
+
+</html>
