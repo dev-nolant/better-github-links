@@ -1,4 +1,4 @@
-# improved-github-links
+# Better GitHub Links
 ## What is BGL (Better GitHub Links)?
 BGL (Better GitHub Links) is a new way of providing links for your MarkDown files in GitHub. GitHub doesn't automatically allow the '\_blank' tab to be implimented, so any time you click a link, the current page is replaced. 
 
