@@ -6,4 +6,5 @@ This can lead to a lack of user interaction on your GitHub pages. BGL fixes this
 
 _Currently in development_ ~ The current state requires the user to press a button if the page doesn't automatically load. It works either way, but it is more of a hastle sadly. We plan on fixing this as soon as we can, but in the meantime, it's still a good solution!
 ## How To
-[More information and instructions here](https://nolant.org/linkify?link=https://better-github-links.vercel.app)
+Old GitHub Method of Links: [More information and instructions here](https://better-github-links.vercel.app)
+New BGL Method: [More information and instructions here](https://nolant.org/linkify?link=https://better-github-links.vercel.app)
