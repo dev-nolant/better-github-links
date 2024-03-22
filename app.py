@@ -7,11 +7,11 @@ app = Flask(__name__)
 # HOME Default
 @app.route('/')
 def main():
-    readme_file = open("files/README.md", "r")
+    with open("files/README.md", "r") as readme_file:
 
-    md_template_string = markdown.markdown(
-        readme_file.read(), extensions=["fenced_code"]
-    )
+        md_template_string = markdown.markdown(
+            readme_file.read(), extensions=["fenced_code"]
+        )
 
     return md_template_string
 
